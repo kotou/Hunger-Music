@@ -203,7 +203,7 @@
             if (_this.classifyId === "0") {
                 _this.loadCollection()
             } else {
-                $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php', {channel: _this.classifyId}).done(function (result) {
+                $.getJSON('//jirenguapi.applinzi.com/fm/getSong.php', {channel: _this.classifyId}).done(function (result) {
                     _this.isPlay(result.song[0])
                 })
             }
