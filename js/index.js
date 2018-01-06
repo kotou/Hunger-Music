@@ -217,6 +217,12 @@
             this.$the.text(song.title)
             this.$songster.text(song.artist)
             this.$box.find('.state').removeClass('icon-play').addClass('icon-pause')
+            var hear = Math.floor(Math.random() * (50000 - 5000 + 1)) + 5000
+            var like = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000
+            var praise = Math.floor(Math.random() * (8000 - 1000 + 1)) + 1000
+            this.$content.find('.hear').text(hear)
+            this.$content.find('.like').text(like)
+            this.$content.find('.praise').text(praise)
             if (this.collection[song.sid]) {
                 this.$box.find('.heart').addClass('collect')
             } else {
