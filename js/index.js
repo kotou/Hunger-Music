@@ -71,7 +71,7 @@
                 .done(function (result) {
                     _this.up(result)
                 }).fail(function () {
-                console.log('error')
+                alert('error')
             })
         },
         up: function (data) {
