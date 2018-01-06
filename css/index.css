@@ -1,0 +1,342 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body, section {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font: 14px/1.5 cursive;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        .clearfix::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .panel {
+            display: block;
+        }
+
+        .panel > main {
+            padding-top: 12vh;
+            height: calc(100% - 24vh);
+        }
+
+        .lower {
+            height: 24vh;
+        }
+
+        .layout {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        @media (min-width: 700px) {
+            .layout {
+                width: 600px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .layout {
+                width: 800px;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .layout {
+                width: 900px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .layout {
+                width: 1100px;
+            }
+        }
+
+        .backdrop {
+            z-index: -1;
+            background: url(https://ws1.sinaimg.cn/large/b44f5fbfgy1fn66sui97kj218e0ozdkb.jpg) center center no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            bottom: -10px;
+            right: -10px;
+            filter: blur(2px);
+        }
+
+        .backdrop::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .cover {
+            background-image: url(https://ws1.sinaimg.cn/large/b44f5fbfgy1fn66xoyatqj20vx0vx42r.jpg);
+            background-size: cover;
+            background-position: center center;
+            width: 50vh;
+            height: 50vh;
+        }
+
+        .tag {
+            margin-top: 4vh;
+            text-align: center;
+            display: flex;
+        }
+
+        .tag .iconfont {
+            color: #fff;
+            opacity: 0.4;
+            font-size: 5vh;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .tag .iconfont:hover {
+            opacity: 0.8;
+        }
+
+        .box {
+            float: left;
+        }
+
+        .content {
+            margin-left: 60vh;
+            color: #fff;
+        }
+
+        .content .sum {
+            font-size: 2vh;
+            padding: 0.8vh 1.6vh;
+            background: #1cadc5;
+        }
+
+        .content .songname {
+            font-size: 6vh;
+            margin-top: 2vh;
+        }
+
+        .content .icon {
+            display: flex;
+        }
+
+        .content .iconfont {
+            flex: 1;
+            margin-top: 12vh;
+            font-size: 3vh;
+        }
+
+        .content .iconfont span {
+            padding-left: 1vh;
+        }
+
+        .content .ct {
+            margin-top: 10vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .ct .bar {
+            flex: 1;
+            height: 0.8vh;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 0.5vh;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .ct .bar .tempo {
+            position: absolute;
+            height: 0.8vh;
+            width: 0%;
+            background-color: #fff;
+            border-radius: 0.5vh;
+        }
+
+        .ct .time {
+            width: 3vh;
+            font-size: 2vh;
+            margin-left: 1vh;
+        }
+
+        .content .singer {
+            margin-top: 2vh;
+            font-size: 2vh;
+            opacity: 0.6;
+        }
+
+        .lower {
+            height: 24vh;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 -0.25vh 0.25vh 0.25vh rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .lower > .layout {
+            position: relative;
+        }
+
+        .lower .layout .iconfont {
+            position: absolute;
+            top: 6vh;
+            opacity: 0;
+            cursor: pointer;
+            font-size: 6vh;
+        }
+
+        .lower:hover .iconfont {
+            opacity: 0.6;
+        }
+
+        .lower .iconfont:hover {
+            opacity: 1;
+        }
+
+        .lower .icon-left {
+            left: -8vh;
+        }
+
+        .lower .icon-right {
+            right: -8vh;
+        }
+
+        .lower .menu {
+            position: relative;
+            overflow: hidden;
+            height: 24vh;
+        }
+
+        .lower .menu > ul {
+            position: absolute;
+            left: 0;
+        }
+
+        .lower ul > li {
+            float: left;
+            width: 20vh;
+            height: 20vh;
+            text-align: center;
+            cursor: pointer;
+            margin: 2vh;
+        }
+
+        .lower li .nav {
+            height: 16vh;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .lower li:hover {
+            box-shadow: 0 0 .5vh .5vh rgba(255, 255, 255, 0.8);
+        }
+
+        .lower h3 {
+            font-size: 2vh;
+            margin-top: 1vh;
+            opacity: 0.7;
+        }
+
+        .active {
+            box-shadow: 0 0 .5vh .5vh rgba(255, 255, 255, 0.8);
+        }
+
+        .tag .collect {
+            color: red;
+            opacity: 0.8;
+        }
+        
+        .lyric {
+            font-size: 3vh;
+        }
+
+        .screen > main {
+            padding-top: 12vh;
+            height: calc(100% - 13vh);
+            position: relative;
+        }
+
+        .screen .cover-two {
+            background-image: url(https://ws1.sinaimg.cn/large/b44f5fbfgy1fn66xoyatqj20vx0vx42r.jpg);
+            background-size: cover;
+            background-position: center center;
+            width: 50vh;
+            height: 50vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tail {
+            height: 13vh;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 -0.25vh 0.25vh 0.25vh rgba(255, 255, 255, 0.2);
+            color: #fff;
+            position: relative;
+        }
+
+        .line {
+            height: 0.8vh;
+            background: rgba(255, 255, 255, 0.4);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .line .move {
+            position: absolute;
+            height: 0.8vh;
+            background-color: #fff;
+            width: 0%;
+        }
+
+        .tail {
+            text-align: center;
+        }
+
+        .tail .songname-two {
+            font-size: 5vh;
+        }
+
+        .tail .singer-two {
+            opacity: 0.6;
+            font-size: 2.6vh;
+        }
+
+        .time-two {
+            position: absolute;
+            right: 10vh;
+            bottom: 1vh;
+        }
+
+        .word {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 600px;
+            text-align: center;
+            font-size: 6vh;
+            color: #fff;
+        }
