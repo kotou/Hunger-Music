@@ -46,4 +46,4 @@
 - 鼠标移动事件
 
 ## 技术栈关键字
- - jQuery、CSS3、响应式、事件中心、正则表达式、localStorage、jQuery插件、音乐api
+ - jQuery、CSS3、响应式、事件中心、正则表达式、localStorage、jQuery插件、音乐api、animate
